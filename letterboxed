@@ -4,6 +4,7 @@ input=$1
 if [ -z "$input" ]
 then
 echo Movie name is missing
+exit
 fi
 output=$(curl -s  https://letterboxd.com/film/$input/ | grep -w 3.6 | xargs -n1 | grep height | awk -F = '{print $2}')
 
