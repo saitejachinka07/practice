@@ -12,7 +12,7 @@ fi
 
 echo hello -$hello
 
-if [ "$hello" == "learn-shell" ]
+if [ "$hello" == "01-sample.sh" ]
 then
     echo "script is executed"
     else
