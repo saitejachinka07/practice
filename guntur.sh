@@ -3,7 +3,7 @@
 
 input=$1
 
-if [ -z "$input"]
+if [ -z "$input" ]
  then
 echo Input is missing
 exit
