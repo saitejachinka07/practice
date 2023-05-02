@@ -11,7 +11,7 @@ fi
 
  hello=$(curl -s https://github.com/raghudevopsb72/$input | grep "01-sample.sh" | xargs -n1 | grep title | awk -F = '{print $2}')
 
-echo hello -$hello
+echo  $hello
 
 if [ "$hello" == "01-sample.sh" ]
 then
