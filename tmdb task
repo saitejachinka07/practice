@@ -7,7 +7,7 @@ exit
 
 fi
 
-percent=$(curl -s https://www.themoviedb.org/movie/76600-avatar-the-way-of-water | grep user_score_chart |xargs -n1 | grep  data-percent | awk -F = '{print $2}'|awk -F . '{print $1}')
+percent=$(curl -s https://www.themoviedb.org/movie/$input | grep user_score_chart |xargs -n1 | grep  data-percent | awk -F = '{print $2}'|awk -F . '{print $1}')
 
 echo percent -$percent
 
