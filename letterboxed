@@ -1,0 +1,18 @@
+
+
+input=$1
+if [ -z "$input" ]
+then
+echo Movie name is missing
+fi
+output=$(curl -s  https://letterboxd.com/film/$input/ | grep -w 3.6 | xargs -n1 | grep height | awk -F = '{print $2}')
+
+echo height -$output
+
+if [ "$output" == 14 ]
+then
+  echo -e  movie name is "\e[36m beau-is-afraid \e[0m"
+
+  else
+  echo some other movie
+  fi
